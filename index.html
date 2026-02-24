@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebirth Clicker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Rebirth Clicker</h1>
+      <p class="subtitle">Click, upgrade, and rebirth to grow faster every run.</p>
+
+      <section class="stats card">
+        <div><strong>Coins:</strong> <span id="coins">0</span></div>
+        <div><strong>Coins / click:</strong> <span id="coinsPerClick">1</span></div>
+        <div><strong>Coins / sec:</strong> <span id="coinsPerSecond">0</span></div>
+        <div><strong>Lifetime coins:</strong> <span id="lifetimeCoins">0</span></div>
+      </section>
+
+      <section class="click-area card">
+        <button id="clickButton" class="click-button">Gain Coins</button>
+      </section>
+
+      <section class="shop card">
+        <h2>Upgrades</h2>
+        <button id="buyClickUpgrade">Buy Pickaxe (+1 click) - Cost: <span id="clickUpgradeCost">15</span></button>
+        <button id="buyAutoUpgrade">Buy Miner (+1/sec) - Cost: <span id="autoUpgradeCost">40</span></button>
+      </section>
+
+      <section class="rebirth card">
+        <h2>Rebirth System</h2>
+        <p>You can rebirth once you have enough lifetime coins.</p>
+        <div><strong>Rebirth points:</strong> <span id="rebirthPoints">0</span></div>
+        <div><strong>Current multiplier:</strong> x<span id="multiplier">1.00</span></div>
+        <div><strong>Next rebirth gains:</strong> +<span id="pendingRebirthPoints">0</span> RP</div>
+        <div><strong>Requirement:</strong> <span id="rebirthRequirement">1000</span> lifetime coins</div>
+        <button id="rebirthButton" class="rebirth-button">Rebirth</button>
+      </section>
+
+      <section class="tips card">
+        <h2>How rebirth works</h2>
+        <ul>
+          <li>You earn rebirth points (RP) from lifetime coins each run.</li>
+          <li>Rebirthing resets run progress (coins and upgrades) but keeps RP.</li>
+          <li>Each RP gives +10% production permanently for future runs.</li>
+          <li>Requirement scales after each rebirth for long-term progression.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
